@@ -23,7 +23,9 @@ public class LogExecTimeHandler implements InvocationHandler {
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
         System.out.println("Hello from the proxy handler method!");
-        return "Not yet delegating to original service implementation!";
+        String retVal = this.service.sayHello();
+        System.out.println("Proxy func after delegation!");
+        return retVal;
     }
     
 }

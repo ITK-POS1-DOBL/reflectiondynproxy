@@ -28,7 +28,7 @@ public class DynProxyMain {
                 service.getClass().getInterfaces(), 
                 new LogExecTimeHandler(service));
         
-        System.out.println(service.sayHello());
+        System.out.println(timeProxy.sayHello());
     }
     
 }
